@@ -1,0 +1,40 @@
+.header__sitename {
+    color: darkslategray;
+  }
+
+
+.top-menu {
+    &__burger {
+
+        width: 2em;
+        height: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 5px;
+        padding: .75rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #eceff4;
+        }
+
+        div {
+            height: 3px;
+            border-radius: 5px;
+            background-color: darkmagenta;
+        }
+    }
+    &__navigation {
+        a {
+        padding: .5rem;
+        }
+
+        .link--highlighted {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    }
+
+}
