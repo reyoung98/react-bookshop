@@ -6,14 +6,20 @@ import Footer from './Footer'
 import Body from './Body'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+  const [page, setPage] = useState('');   // default empty '' means home
 
   return (
    <div className="app">
-     <Header />
+     <Header 
+        page={ page } 
+        setPage={ setPage }
+      />
 
-     <Body />
-     
+     <Body 
+        page={ page }
+     />
+
      <Footer />
    </div>
   )

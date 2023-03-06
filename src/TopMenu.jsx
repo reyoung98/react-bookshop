@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Header.scss'
+import TopMenuLink from './TopMenuLink';
 
 export default function TopMenu(props) {
 
@@ -10,21 +11,42 @@ export default function TopMenu(props) {
     }
 
     console.log(props)
+    
+    const { currentItem, setTestValue, setPage } = props;      // destructuring array -- can also be done above in props object instead
 
     return (
         <div className="top-menu">
 
             {
-                open === false                            // ternary
+                open === false                                  // ternary
                     ? (
                         ''
                     )
                     : (
                         <nav className="top-menu__navigation">
-                            <a className={ 'link' + (props.currentItem === '' ? ' link--highlighted' : '')} href="#">Home</a>
-                            <a className={ 'link' + (props.currentItem === 'about' ? ' link--highlighted' : '')} href="#about">About us</a>
-                            <a className={ 'link' + (props.currentItem === 'contact' ? ' link--highlighted' : '')} href="#contact">Contact</a>
+                            <TopMenuLink
+                            url = ""
+                            label="Home"
+                            currentItem= { currentItem } 
+                            setPage = { setPage }
+                            setTestValue= { setTestValue } 
+                            />
 
+                            <TopMenuLink
+                            url = "about"
+                            label="About Us"
+                            currentItem= { currentItem } 
+                            setPage = { setPage }
+                            setTestValue= { setTestValue } 
+                            />
+
+                            <TopMenuLink
+                            url = "contact"
+                            label="Contact"
+                            currentItem= { currentItem } 
+                            setPage = { setPage }
+                            setTestValue= { setTestValue } 
+                            />
                         </nav>
                     )
             }

@@ -1,16 +1,26 @@
 import './Header.scss'
 import TopMenu from './TopMenu'
+import { useState } from 'react'
 
-export default function Header() {
+export default function Header({setPage}) {
 
-    const fooValue = '123';
+    const [testValue, setTestValue] = useState(null);
 
     return (
-        <div className="header__sitename">The Bookshelf
-        <TopMenu 
-            currentItem={ 'about' }
-            />
-        </div>
+        <header className="header">
+            <div className="header__sitename">The Bookshelf</div>
+
+            <div>
+                Last menu item clicked: { testValue }
+            </div>
+
+            <TopMenu 
+                currentItem={ 'about' }
+                setPage = { setPage }
+                setTestValue={ setTestValue }
+                />
+           
+        </header>
         
     )
 }
