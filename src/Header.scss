@@ -1,3 +1,16 @@
+.header {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.top-menu {
+    display: flex;
+    align-items: center;
+}
+
 .header__sitename {
     color: darkslategray;
   }
@@ -27,7 +40,7 @@
     }
     &__navigation {
         a {
-        padding: .5rem;
+        padding: 1rem;
         }
 
         .link--highlighted {

@@ -11,9 +11,11 @@ export default function Header({setPage}) {
         <header className="header">
             <div className="header__sitename">The Bookshelf</div>
 
-            <div>
+            {/* <div>
                 Last menu item clicked: { testValue }
-            </div>
+            </div> */}
+            
+            <CurrencySelection/>
 
             <TopMenu 
                 currentItem={ 'about' }
@@ -21,7 +23,6 @@ export default function Header({setPage}) {
                 setTestValue={ setTestValue }
                 />
 
-            <CurrencySelection></CurrencySelection>
            
         </header>
         

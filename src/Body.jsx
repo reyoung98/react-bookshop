@@ -1,4 +1,5 @@
 import './Body.scss'
+import Homepage from './Homepage'
 
 export default function Header({ page }) {
     
@@ -6,7 +7,7 @@ export default function Header({ page }) {
 
     if (page === '') {
         content = (
-            <h2>Welcome to our Bookshelf</h2>
+            <Homepage />
         )
     } else if (page === 'about') {
         content = (
