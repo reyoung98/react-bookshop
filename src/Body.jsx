@@ -29,7 +29,7 @@ export default function Header({ page }) {
             <h1 className="app__headline">The Bookshelf</h1>
 
             { content }
-            <button>Enter</button>
+        
         </main>
     )
 }
