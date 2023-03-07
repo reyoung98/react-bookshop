@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <footer className="footer">
                 <div className="footer__copyright">
-                    &copy; 2023 Flourish and Blotts
+                    &copy; 2023 The Bookshelf
         </div>
             </footer>
         </>
