@@ -1,9 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import CurrencyContext from './CurrencyContext'
 
 export default function CurrencySelection() {
 
-    const [currency, setCurrency] = useState(localStorage.getItem('currency') || 'EUR')
-    const [exchangeRate, setExchangeRate] = useState('1')
+    const contextCurrency = useContext(CurrencyContext)
+
+    const { currency, setCurrency } = useContext(CurrencyContext)
+    const { exchangeRate, setExchangeRate } = useContext(CurrencyContext)
+    // const [currency, setCurrency] = useState(localStorage.getItem('currency') || 'EUR')
+    // const [exchangeRate, setExchangeRate] = useState('1')
 
     const handleSelect = (event) => {
         setCurrency(event.target.value)
@@ -42,12 +47,12 @@ export default function CurrencySelection() {
                 <option value="USD">USD</option>
                 <option value="CZK">CZK</option>
             </select>
-            <div>{
+            {/* <div>{
                 currency !== 'EUR'
                 ? <>EUR Exchange rate: { exchangeRate }</>
                 : ''
             }
-            </div>
+            </div> */}
         </div>
     )
 }
