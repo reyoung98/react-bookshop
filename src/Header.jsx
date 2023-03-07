@@ -1,6 +1,7 @@
 import './Header.scss'
 import TopMenu from './TopMenu'
 import { useState } from 'react'
+import CurrencySelection from './CurrencySelection';
 
 export default function Header({setPage}) {
 
@@ -19,6 +20,8 @@ export default function Header({setPage}) {
                 setPage = { setPage }
                 setTestValue={ setTestValue }
                 />
+
+            <CurrencySelection></CurrencySelection>
            
         </header>
         
